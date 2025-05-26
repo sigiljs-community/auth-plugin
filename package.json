@@ -1,0 +1,53 @@
+{
+  "name": "@sigiljs-community/auth-plugin",
+  "version": "0.0.0",
+  "description": "Plugin for SigilJS framework that provides authentication with JWT-like tokens",
+  "main": "dist/auth-plugin.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "vite build -- --production"
+  },
+  "engines": {
+    "node": ">=24.0.2"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/auth-plugin.mjs",
+      "require": "./dist/auth-plugin.js"
+    }
+  },
+  "keywords": [
+    "typescript",
+    "plugin",
+    "sigiljs",
+    "sigiljs-plugin"
+  ],
+  "author": "Kurai Foundation",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sigiljs-community/auth-plugin.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/sigiljs-community/auth-plugin/issues"
+  },
+  "homepage": "https://github.com/sigiljs-community/auth-plugin#readme",
+  "dependencies": {
+    "@sigiljs/sigil": "^0.2.0-rc.1"
+  }
+}
