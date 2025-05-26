@@ -35,6 +35,8 @@ export interface AuthPluginConfig {
  * Plugin for SigilJS framework that provides authentication with JWT-like tokens
  */
 export default class AuthPlugin extends SigilPlugin<AuthPluginConfig> {
+  public static name = "AuthPlugin"
+
   #webTokensController: WebTokensController
 
   constructor() {
