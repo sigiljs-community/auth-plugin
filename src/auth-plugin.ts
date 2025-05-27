@@ -116,10 +116,11 @@ export default class AuthPlugin extends SigilPlugin<AuthPluginConfig> {
    * Check if specified access token is valid
    *
    * @param {string} token access token
+   * @param allowExpired if true, valid tokens will still valid even if expired
    * @returns {boolean} is valid
    */
-  public verifyAccessToken(token: string): boolean {
-    return this.#webTokensController.verifyWebToken(token)
+  public verifyAccessToken(token: string, allowExpired?: boolean): boolean {
+    return this.#webTokensController.verifyWebToken(token, allowExpired)
   }
 
   /**
