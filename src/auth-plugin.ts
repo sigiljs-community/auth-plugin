@@ -97,10 +97,11 @@ export default class AuthPlugin extends SigilPlugin<AuthPluginConfig> {
    * Issue new access token with specified payload
    *
    * @param payload access token payload
+   * @param expiresIn
    * @returns {string} generated access token
    */
-  public issueAccessToken(payload: any): string {
-    return this.#webTokensController.issueWebToken(payload)
+  public issueAccessToken(payload: any, expiresIn?: number): string {
+    return this.#webTokensController.issueWebToken(payload, expiresIn)
   }
 
   /**
